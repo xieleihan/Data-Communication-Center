@@ -1,6 +1,11 @@
 import './App.less';
 import { Outlet, useNavigate } from 'react-router-dom';
-import { useState } from 'react';
+import React, { useState, createContext } from 'react';
+
+export const AppContext = createContext({
+  showContent: true,
+  setShowContent: (value: boolean) => { console.log(value); },
+});
 
 function App() {
   const navigate = useNavigate();
@@ -34,6 +39,7 @@ function App() {
   const index: number = Math.floor(Math.random() * background.length);
 
   return (
+    <AppContext.Provider value={{ showContent, setShowContent }} >
     <>
       {showContent && (
         <div
@@ -50,7 +56,7 @@ function App() {
           <div className="startpages">
             <div className="content">
               <div className="logo">
-                <img src="../public/icon/favicon.png" alt="" />
+                <img src="/icon/favicon.png" alt="" />
               </div>
               <div className="function">
                 <button
@@ -77,7 +83,8 @@ function App() {
         </div>
       )}
       <Outlet />
-    </>
+    </>  
+    </AppContext.Provider >
   );
 }
 
