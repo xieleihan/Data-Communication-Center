@@ -3,6 +3,8 @@ import App from '../App.tsx'
 import Register from '../views/Register.tsx'
 import Login from '../views/Login.tsx'
 import HomeView from '../views/HomeView.tsx'
+import ServerView from '../views/ServerstatusView.tsx'
+import About from '../views/AboutView.tsx'
 
 // 配置路由表(设置URL和组件的映射关系  URL和组件一一对应 )
 const routes = [
@@ -24,6 +26,14 @@ const routes = [
     {
         path: '/home',
         element: <HomeView/>
+    },
+    {
+        path: '/server',
+        element: <ServerView/>
+    },
+    {
+        path: '/about',
+        element: <About/>
     }
 ]
 

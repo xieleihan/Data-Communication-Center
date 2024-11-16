@@ -1,6 +1,9 @@
 import './App.less';
 import { Outlet, useNavigate } from 'react-router-dom';
 import React, { useState, createContext } from 'react';
+// 导入store
+import { Provider } from 'react-redux';
+import store from './store/index';
 
 export const AppContext = createContext({
   showContent: true,
@@ -81,8 +84,10 @@ function App() {
             </div>
           </div>
         </div>
-      )}
-      <Outlet />
+        )}
+        <Provider store={store}>
+          <Outlet />
+        </Provider>
     </>  
     </AppContext.Provider >
   );
