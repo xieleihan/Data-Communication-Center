@@ -2,6 +2,7 @@
 import App from '../App.tsx'
 import Register from '../views/Register.tsx'
 import Login from '../views/Login.tsx'
+import HomeView from '../views/HomeView.tsx'
 
 // 配置路由表(设置URL和组件的映射关系  URL和组件一一对应 )
 const routes = [
@@ -19,6 +20,10 @@ const routes = [
                 element: <Register/>
             }
         ]
+    },
+    {
+        path: '/home',
+        element: <HomeView/>
     }
 ]
 

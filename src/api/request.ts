@@ -5,6 +5,7 @@ const instance = axios.create({
     // baseURL: 'http://localhost:4000',// 服务器根地址
     // timeout: 5000,
     // headers: { 'X-Custom-Header': 'foobar' }
+    
 });
 
 // 添加响应拦截器

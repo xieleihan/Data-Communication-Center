@@ -4,6 +4,7 @@ import 'lib-flexible/flexible'
 import { BrowserRouter } from 'react-router-dom';
 import { Routes, Route } from 'react-router-dom';
 import routes from './router/routes';
+import 'antd/dist/reset.css';
 
 createRoot(document.getElementById('root')!).render(
   <BrowserRouter>
