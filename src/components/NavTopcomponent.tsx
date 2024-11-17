@@ -104,7 +104,7 @@ function NavTopComponent(props: NavTopComponentProps) {
                         props.changeTopIndex(e.key);
                         switch (e.key) {
                             case '1':
-                                navigate('/home');
+                                navigate('/home/userdistributed');
                                 break;
                             case '2':
                                 navigate('/server');

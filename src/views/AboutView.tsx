@@ -1,5 +1,6 @@
 import NavTopComponent from '../components/NavTopcomponent';
 import { Layout, theme } from 'antd';
+import '../static/css/AboutView.less';
 
 const { Content } = Layout;
 
@@ -21,7 +22,16 @@ function AboutView() {
                         }}
                     >
                         <Content style={{ padding: '0 24px', minHeight: 280 }}>
-
+                            <h2>关于项目</h2>
+                            <div className='content'>
+                                <div className="left">
+                                    <img src="/icon/favicon.png" alt="" />
+                                </div>
+                                <div className="right">
+                                    <h2>技术栈</h2>
+                                    <p>React + TypeScript</p>
+                                </div>
+                            </div>
                         </Content>
                     </Layout>
                 </Content>

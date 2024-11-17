@@ -26,8 +26,8 @@ const items2: MenuProps['items'] = [
         icon: React.createElement(LaptopOutlined),
         label: '信息管理',
         children: [
-            { key: '5', label: 'option5' },
-            { key: '6', label: 'option6' },
+            { key: '5', label: '文章详情' },
+            { key: '6', label: '发布文章' },
             { key: '7', label: 'option7' },
             { key: '8', label: 'option8' },
         ],
@@ -96,10 +96,10 @@ function HomeView() {
                                         console.log('option4');
                                         break;
                                     case '5':
-                                        console.log('option5');
+                                        navigate('/home/wordinfo');
                                         break;
                                     case '6':
-                                        console.log('option6');
+                                        navigate('/home/infoadd');
                                         break;
                                     case '7':
                                         console.log('option7');

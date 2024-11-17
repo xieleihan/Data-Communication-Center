@@ -7,6 +7,8 @@ import ServerView from '../views/ServerstatusView.tsx'
 import About from '../views/AboutView.tsx'
 import UserInfo from '../components/UserInfo.tsx'
 import UserDistributed from '../components/UserDistributed.tsx'
+import InfoAdd from '../components/InfoAdd.tsx'
+import WordInfo from '../components/WordInfo.tsx'
 
 // 配置路由表(设置URL和组件的映射关系  URL和组件一一对应 )
 const routes = [
@@ -36,6 +38,14 @@ const routes = [
             {
                 path: 'userdistributed',
                 element: <UserDistributed/>
+            },
+            {
+                path: 'infoadd',
+                element: <InfoAdd/>
+            },
+            {
+                path: 'wordinfo',
+                element: <WordInfo/>
             }
         ]
     },
