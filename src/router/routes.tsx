@@ -5,6 +5,8 @@ import Login from '../views/Login.tsx'
 import HomeView from '../views/HomeView.tsx'
 import ServerView from '../views/ServerstatusView.tsx'
 import About from '../views/AboutView.tsx'
+import UserInfo from '../components/UserInfo.tsx'
+import UserDistributed from '../components/UserDistributed.tsx'
 
 // 配置路由表(设置URL和组件的映射关系  URL和组件一一对应 )
 const routes = [
@@ -25,7 +27,17 @@ const routes = [
     },
     {
         path: '/home',
-        element: <HomeView/>
+        element: <HomeView />,
+        children: [
+            {
+                path: 'userinfo',
+                element: <UserInfo/>
+            },
+            {
+                path: 'userdistributed',
+                element: <UserDistributed/>
+            }
+        ]
     },
     {
         path: '/server',

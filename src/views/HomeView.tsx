@@ -4,6 +4,7 @@ import type { MenuProps } from 'antd';
 import { Breadcrumb, Layout, Menu, theme } from 'antd';
 import '../static/css/HomeView.less';
 import NavTopComponent from '../components/NavTopcomponent';
+import { Outlet, useNavigate } from 'react-router-dom';
 
 const { Content, Footer, Sider } = Layout;
 
@@ -55,6 +56,8 @@ function HomeView() {
         { title: 'About', href: '/about' },
     ];
 
+    const navigate = useNavigate();
+
     return (
         <Layout style={{ minHeight: '100vh' }}> {/* Ensure full screen height */}
             <NavTopComponent />
@@ -76,9 +79,55 @@ function HomeView() {
                             defaultOpenKeys={['sub1']}
                             style={{ height: '100%' }}
                             items={items2}
+                            onClick={(e) => {
+                                // console.log('click ', e.key);
+                                switch (e.key) {
+                                    case '1':
+                                        navigate('/home/userdistributed');
+                                        break;
+                                    case '2':
+                                        // console.log('用户信息');
+                                        navigate('/home/userinfo');
+                                        break;
+                                    case '3':
+                                        console.log('option3');
+                                        break;
+                                    case '4':
+                                        console.log('option4');
+                                        break;
+                                    case '5':
+                                        console.log('option5');
+                                        break;
+                                    case '6':
+                                        console.log('option6');
+                                        break;
+                                    case '7':
+                                        console.log('option7');
+                                        break;
+                                    case '8':
+                                        console.log('option8');
+                                        break;
+                                    case '9':
+                                        console.log('option9');
+                                        break;
+                                    case '10':
+                                        console.log('option10');
+                                        break;
+                                    case '11':
+                                        console.log('option11');
+                                        break;
+                                    case '12':
+                                        console.log('option12');
+                                        break;
+                                    default:
+                                        break;
+                                }
+                            }}
                         />
                     </Sider>
-                    <Content style={{ padding: '0 24px', minHeight: 280 }}>Content</Content>
+                    <Content style={{ padding: '0 24px', minHeight: 280 }}>
+                        <Outlet />
+                    </Content>
                 </Layout>
             </Content>
             <Footer style={{ textAlign: 'center' }}>
