@@ -37,7 +37,7 @@ function Login() {
                 setInputPassword('')
                 localStorage.setItem('AUTO_TOKEN', JSON.parse(JSON.stringify(res)).token)
                 setTimeout(() => {
-                    navigate('/home')
+                    navigate('/home/userdistributed')
                 }, 2000)
 
             } else {
